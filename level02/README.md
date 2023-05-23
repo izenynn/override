@@ -92,4 +92,16 @@ Since the binary does not have PIE, the `pass` buffer in which the password
 is saved, will always be in the same location, so let's play a little with
 the `printf` and discover where it's stored.
 
-TODO...
+Just do some `%N$lx` (since it's a 64 bits binary), and print the memory.
+
+By printing the memory and reversing it (it's little-endian, remember), we find
+a string that seems like a flag.
+
+*Look at the script in `./resources/exploit.sh`, of course this is automated,
+I'm not bored enought to do it manually.*
+
+Also, looking at the assembly, we can see that the password is between the
+`username` we input, and the `password` we also input, so the script greps
+this and output what's it's in between (the `.pass` file content).
+
+Run `./resources/exploit.sh`.
