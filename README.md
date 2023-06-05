@@ -1,7 +1,7 @@
 # override
 
 This project aims to further your knowledge in the world of elf-like binary exploitation
-in i386 system.
+in x86_64 system.
 
 The more or less complex methods you will use will give you a new perspective on IT
 in general, but mostly raise your awareness on issues coming from programming common
